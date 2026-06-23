@@ -4,20 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trang Đăng Nhập</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div>
       <form
+        class="login"
         action="https://basic-web-training.vercel.app/api/practice/submit/login"
         method="post"
       >
-        <h1>Đăng Nhập</h1>
+        <h1 class="title">Đăng Nhập</h1>
         <p>
           Vui lòng nhập thông tin tài khoản của bạn để đăng nhập vào hệ thống.
         </p>
         <div>
-          <label for="email">Email</label>
+          <label class="label" for="email">Email</label>
           <input
+            class="input"
             type="email"
             id="email"
             name="email"
@@ -27,8 +30,9 @@
         </div>
 
         <div>
-          <label for="password">Mật khẩu</label>
+          <label class="label" for="password">Mật khẩu</label>
           <input
+            class="input"
             type="password"
             id="password"
             name="password"
@@ -39,16 +43,17 @@
 
         <div>
           <input
+            class="input"
             type="checkbox"
             id="remember"
             name="remember"
             value="1"
             checked
           />
-          <label for="remember">Ghi nhớ đăng nhập</label>
+          <label class="label" for="remember">Ghi nhớ đăng nhập</label>
         </div>
 
-        <input type="hidden" name="formType" value="login" />
+        <input class="input" type="hidden" name="formType" value="login" />
 
         <button type="submit">Đăng Nhập</button>
         <div>
