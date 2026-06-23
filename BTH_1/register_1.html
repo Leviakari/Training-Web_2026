@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Đăng Ký</title>
+  </head>
+  <body>
+    <div>
+      <h1>Đăng Ký Tài Khoản</h1>
+      <p>Điền đầy đủ thông tin bên dưới để tạo tài khoản mới.</p>
+
+      <form
+        action="https://basic-web-training.vercel.app/api/practice/submit/register"
+        method="POST"
+      >
+        <section>
+          <h2>Thông tin cá nhân</h2>
+
+          <div>
+            <label for="lastname">Họ</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              required
+              placeholder="Nguyễn"
+            />
+          </div>
+
+          <div>
+            <label for="firstname">Tên</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              required
+              placeholder="Văn A"
+            />
+          </div>
+
+          <div>
+            <label for="birthdate">Ngày sinh</label>
+            <input type="date" id="birthdate" name="birthdate" required />
+          </div>
+
+          <div>
+            <label>Giới tính</label>
+            <label>
+              <input type="radio" name="gender" value="male" required /> Nam
+            </label>
+            <label>
+              <input type="radio" name="gender" value="female" required /> Nữ
+            </label>
+            <label>
+              <input type="radio" name="gender" value="other" required /> Khác
+            </label>
+          </div>
+
+          <div>
+            <label for="phone">Số điện thoại</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              pattern="[0-9]{10,11}"
+            />
+          </div>
+        </section>
+
+        <section>
+          <h2>Thông tin tài khoản</h2>
+
+          <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div>
+            <label for="password">Mật khẩu</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              minlength="8"
+            />
+          </div>
+
+          <div>
+            <label for="confirmPassword">Xác nhận mật khẩu</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+              minlength="8"
+            />
+          </div>
+        </section>
+
+        <div>
+          <input type="checkbox" id="agree" name="agree" value="1" required />
+          <label for="agree">Đồng ý điều khoản</label>
+        </div>
+
+        <input type="hidden" name="formType" value="register" />
+
+        <div>
+          <div>
+            <button type="reset">Nhập Lại</button>
+          </div>
+          <div>
+            <button type="submit">Đăng Ký</button>
+          </div>
+        </div>
+
+        <div>
+          <a href="./login_1.html">Đã có tài khoản? Đăng nhập tại đây</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
